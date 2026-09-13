@@ -1,0 +1,95 @@
+:root {
+  --ink: #071312;
+  --paper: #eef4e9;
+  --gold: #efb85f;
+  --muted: #a7b9b2;
+  --line: #b9e8d52b;
+}
+
+body {
+  background: #071312;
+}
+
+.atmosphere {
+  z-index: 0 !important;
+  background:
+    radial-gradient(ellipse at 15% 10%, #0a8f8066, transparent 35%),
+    radial-gradient(ellipse at 90% 25%, #d28a3055, transparent 34%),
+    radial-gradient(ellipse at 50% 100%, #5e2f7955, transparent 45%),
+    #071312 !important;
+}
+
+.atmosphere:before {
+  background: conic-gradient(from 90deg, #14b8a633, transparent 28%, #e3a34144, transparent 62%, #8b5cf644, transparent);
+  filter: blur(55px);
+  animation: theme-aurora 18s linear infinite;
+}
+
+.site-header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  background: linear-gradient(110deg, #061a19dd, #09101499 52%, #311d0bcc) !important;
+}
+
+.intro:before,
+.reveals:before,
+.roadmap:before,
+.faq:before {
+  background: linear-gradient(135deg, #0b3d3acc, #101827e8 48%, #3c2111d9) !important;
+  opacity: 1;
+}
+
+.story:before {
+  background: linear-gradient(125deg, #082f30f2, #171328ed 48%, #41220fe8) !important;
+}
+
+.manifesto {
+  background: radial-gradient(circle at center, #0c827688, transparent 32%), linear-gradient(135deg, #0b2425, #2a170d) !important;
+}
+
+.final {
+  background: linear-gradient(120deg, #062e2f, #16102a 52%, #42220d) !important;
+}
+
+.button {
+  background: linear-gradient(135deg, #e9b95f, #c77a34) !important;
+  color: #160e08;
+  box-shadow: 0 10px 24px #d9913a44;
+}
+
+.button[href*="discord"] {
+  background: linear-gradient(135deg, #9fa9ff, #6d78d7) !important;
+  color: #080b20;
+}
+
+.gallery {
+  animation-duration: 28s;
+}
+
+.final-copy .button {
+  animation: cta-pulse 2.8s ease-in-out infinite;
+}
+
+@media (min-width: 761px) {
+  .hero-copy {
+    max-width: 560px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(3.4rem, 6vw, 6.8rem);
+  }
+
+  .hero-stage {
+    right: -1%;
+    width: min(54vw, 760px);
+  }
+}
+
+@keyframes theme-aurora {
+  to { transform: rotate(360deg) scale(1.1); }
+}
